@@ -14,16 +14,19 @@ body {
 }
 
 .larger-text {
-    font-size: 24px; /* Размер в пикселях */
+    font-size: 24px;
 }
 
 header {
     text-align: center;
-    background: rgba(0, 0, 51, 0.7); /* Более насыщенный темный фон */
+    background: rgba(0, 0, 51, 0.7);
     padding: 60px;
     border-radius: 10px;
     box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+
+    background-color: rgba(0, 0, 0, 0.1);
+    filter: blur(0.5px);
+
     position: relative;
     overflow: hidden;
     margin-bottom: 50px;
@@ -42,29 +45,104 @@ header {
     animation: waveAnimation 4s ease-in-out infinite;
     font-size: 4em;
     color: rgba(127, 219, 255, 0.7);
-    text-shadow: 2px 2px 15px rgba(0, 128, 255, 0.5), 0 0 20px rgba(0, 128, 255, 0.3), 0 0 30px rgba(0, 128, 255, 0.3); /* Постоянное легкое свечение */
+    text-shadow: 2px 2px 15px rgba(0, 128, 255, 0.5), 0 0 20px rgba(0, 128, 255, 0.3), 0 0 30px rgba(0, 128, 255, 0.3);
     transform-origin: bottom center;
     margin-right: 10px;
-    animation-delay: calc(var(--i) * 0.15s);
-    user-select: none; /* Отключаем выделение текста */
-    transition: text-shadow 0.3s ease, color 0.3s ease; /* Плавный переход для цвета и сияния */
+    user-select: none;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.header-wave span:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.header-wave span:nth-child(2) {
+    animation-delay: 0.30s;
+}
+
+.header-wave span:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.header-wave span:nth-child(4) {
+    animation-delay: 0.60s;
+}
+
+.header-wave span:nth-child(5) {
+    animation-delay: 0.75s;
+}
+
+.header-wave span:nth-child(6) {
+    animation-delay: 0.90s;
+}
+
+.header-wave span:nth-child(7) {
+    animation-delay: 1.05s;
+}
+
+.header-wave span:nth-child(8) {
+    animation-delay: 1.20s;
+}
+
+.header-wave span:nth-child(9) {
+    animation-delay: 1.35s;
+}
+
+.header-wave span:nth-child(10) {
+    animation-delay: 1.50s;
+}
+
+.header-wave span:nth-child(11) {
+    animation-delay: 1.65s;
+}
+
+.header-wave span:nth-child(12) {
+    animation-delay: 1.80s;
+}
+
+.header-wave span:nth-child(13) {
+    animation-delay: 1.95s;
+}
+
+.header-wave span:nth-child(14) {
+    animation-delay: 2.10s;
+}
+
+.header-wave span:nth-child(15) {
+    animation-delay: 2.25s;
+}
+
+.header-wave span:nth-child(16) {
+    animation-delay: 2.40s;
+}
+
+.header-wave span:nth-child(17) {
+    animation-delay: 2.55s;
+}
+
+.header-wave span:nth-child(18) {
+    animation-delay: 2.70s;
+}
+
+.header-wave span:nth-child(19) {
+    animation-delay: 2.85s;
 }
 
 .header-wave span:hover {
-    color: #FFD700; /* Меняем цвет на желтоватый */
-    text-shadow: 2px 2px 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 255, 0, 1), 0 0 60px rgba(255, 255, 0, 0.9); /* Усиливаем сияние при наведении */
+    color: #FFD700;
+    text-shadow: 2px 2px 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 255, 0, 1), 0 0 60px rgba(255, 255, 0, 0.9);
 }
 
 .header-wave .space {
     display: inline-block;
-    width: 40px; /* Добавляем больше ширины между словами */
+    width: 40px;
 }
 
 .header-wave span:nth-child(1) { --i: 1; }
 .header-wave span:nth-child(2) { --i: 2; }
 .header-wave span:nth-child(3) { --i: 3; }
 .header-wave span:nth-child(4) { --i: 4; }
-.header-wave .space:nth-child(4) {} /* Пробел после "The" */
+
 .header-wave span:nth-child(5) { --i: 4; }
 .header-wave span:nth-child(6) { --i: 5; }
 .header-wave span:nth-child(7) { --i: 6; }
@@ -74,7 +152,7 @@ header {
 .header-wave span:nth-child(11) { --i: 10; }
 .header-wave span:nth-child(12) { --i: 11; }
 .header-wave span:nth-child(13) { --i: 12; }
-.header-wave .space:nth-child(13) {} /* Пробел после "Battleship" */
+
 .header-wave span:nth-child(14) { --i: 12; }
 .header-wave span:nth-child(15) { --i: 13; }
 .header-wave span:nth-child(16) { --i: 14; }
@@ -82,7 +160,6 @@ header {
 .header-wave span:nth-child(18) { --i: 16; }
 .header-wave span:nth-child(19) { --i: 17; }
 
-/* Анимация */
 @keyframes waveAnimation {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
@@ -118,12 +195,12 @@ header {
 
 .content {
     position: relative;
-    margin-top: 100px; /* Отступ сверху для опускания */
-    padding: 20px; /* Внутренние отступы */
-    background-color: rgba(0, 0, 0, 0.5); /* Изменение цвета и прозрачности */
-    color: #ffffff; /* Цвет текста */
-    border-radius: 10px; /* Скругленные углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .content h2 {
@@ -138,20 +215,19 @@ header {
 }
 
 footer {
-    position: relative; /* Относительное позиционирование для футера */
+    position: relative;
     text-align: center;
     padding: 20px;
     background-color: #00332a;
-    border-top: 1px solid 00332a;
+    border-top: 1px solid #00332a;
     color: #7FDBFF;
     margin-top: 60px;
-    border-radius: 10px; /* Скругленные углы */
-    max-width: 1400px; /* Ограничиваем максимальную ширину */
-    margin: 0 auto 40px; /* Центрируем секцию и добавляем отступ */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
+    border-radius: 10px;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Пузырьки */
 .bubbles {
     position: absolute;
     bottom: 0;
@@ -168,23 +244,21 @@ footer {
     bottom: -100px;
     background-color: rgba(127, 219, 255, 0.3);
     border-radius: 50%;
-    animation: bubble 8s linear infinite; /* Сокращаем время анимации */
+    animation: bubble 8s linear infinite;
     opacity: 0.7;
 }
 
-/* Анимация пузырьков */
 @keyframes bubble {
     0% {
-        transform: translateY(0) translateX(0); /* Начало снизу */
+        transform: translateY(0) translateX(0);
         opacity: 1;
     }
     100% {
-        transform: translateY(-100vh) translateX(20px); /* Подъем вверх */
+        transform: translateY(-100vh) translateX(20px);
         opacity: 0;
     }
 }
 
-/* Настройки для пузырьков с разными размерами, задержками и положениями */
 .bubble:nth-child(1) { left: 5%; width: 15px; height: 15px; animation-duration: 10s; animation-delay: 0s; }
 .bubble:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-duration: 7s; animation-delay: 6.5s; }
 .bubble:nth-child(3) { left: 15%; width: 25px; height: 25px; animation-duration: 16s; animation-delay: 1.5s; }
@@ -211,82 +285,77 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-image: url('assets/sun-rays.png');
     background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     opacity: 0.5;
     pointer-events: none;
-    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0) 90%);
+    z-index: -1;
 }
 
-/* Секция сравнения */
 .comparison-section {
     position: relative;
     padding: 30px 20px;
     background-color: #00332a;
     color: #ffffff;
     text-align: center;
-    border-radius: 10px; /* Скругленные углы */
+    border-radius: 10px;
     max-width: 1400px;
-    margin: 0 auto 50px; /* Отступ снизу для разделения с секцией GitHub */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-    padding-bottom: 60px; /* Добавим отступ снизу */
-    overflow: hidden; /* Это нужно, чтобы пузырьки не выходили за границы секции */
+    margin: 0 auto 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding-bottom: 60px;
+    overflow: hidden;
 }
 
-/* Заголовок */
 .comparison-section h2 {
-    font-size: 2.5em; /* Увеличиваем размер шрифта */
-    color: #7FDBFF; /* Сохраняем светло-голубой цвет */
-    font-weight: bold; /* Делаем текст жирным */
-    text-shadow: 2px 2px 10px rgba(0, 128, 255, 0.5); /* Добавляем тень */
+    font-size: 2.5em;
+    color: #7FDBFF;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 128, 255, 0.5);
     margin-bottom: 60px;
-    transition: transform 0.3s ease, color 0.3s ease; /* Плавный переход при наведении */
-    user-select: none; /* Отключаем выделение текста */
+    transition: transform 0.3s ease, color 0.3s ease;
+    user-select: none;
 }
 
 .comparison-section h2:hover {
-    color: #FFD700; /* Изменяем цвет на золотой при наведении */
-    transform: scale(1.05); /* Легкое увеличение при наведении */
+    color: #FFD700;
+    transform: scale(1.05);
 }
 
-/* Контейнер для фотографий - используем Flexbox */
 .image-container-wrapper {
     display: flex;
-    flex-wrap: wrap; /* Чтобы фотографии переносились на новую строку при малой ширине */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 25px; /* Отступ между изображениями */
+    gap: 25px;
 }
 
-/* Контейнер для каждой пары изображений */
 .image-container {
     position: relative;
-    width: 45%; /* Увеличим ширину каждого изображения */
+    width: 45%;
     margin: 0;
     height: auto;
-    max-width: 600px; /* Ограничим максимальную ширину */
+    max-width: 600px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.5s ease;
 }
 
 .image-container img {
-    user-select: none; /* Отключаем выделение для изображений */
+    user-select: none;
 }
 
-/* Легкое увеличение контейнера при наведении */
 .image-container:hover {
     transform: scale(1.05);
 }
 
-/* Изображение "До" */
 .image-before {
     display: block;
     width: 100%;
     transition: filter 0.8s ease;
 }
 
-/* Изображение "После" */
 .image-after {
     position: absolute;
     top: 0;
@@ -297,7 +366,6 @@ footer {
     transition: all 1s ease;
 }
 
-/* Эффект при наведении */
 .image-container:hover .image-before {
     filter: brightness(50%);
 }
@@ -307,41 +375,38 @@ footer {
     transform: translateX(0) scale(1);
 }
 
-/* Секция с GitHub */
 .github-section {
-    position: relative; /* Ограничиваем пузырьки секцией */
+    position: relative;
     text-align: center;
     padding: 20px 20px;
-    background-color: #00332a; /* Темный фон для секции */
+    background-color: #00332a;
     color: #ffffff;
-    border-radius: 10px; /* Скругленные углы */
-    max-width: 1400px; /* Ограничиваем максимальную ширину */
-    margin: 0 auto 40px; /* Центрируем секцию и добавляем отступ внизу */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень для эффекта */
+    border-radius: 10px;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Описание перед ссылкой */
 .github-description p {
-    font-size: 2.5em; /* Увеличиваем размер шрифта */
-    color: #7FDBFF; /* Сохраняем светло-голубой цвет */
-    font-weight: bold; /* Делаем текст жирным */
-    text-shadow: 2px 2px 10px rgba(0, 128, 255, 0.5); /* Добавляем тень */
+    font-size: 2.5em;
+    color: #7FDBFF;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 128, 255, 0.5);
     margin-bottom: 20px;
-    transition: transform 0.3s ease, color 0.3s ease; /* Плавный переход при наведении */
-    user-select: none; /* Отключаем выделение текста */
+    transition: transform 0.3s ease, color 0.3s ease;
+    user-select: none;
 }
 
 .github-description p:hover {
-    color: #FFD700; /* Изменяем цвет на золотой при наведении */
-    transform: scale(1.1); /* Легкое увеличение при наведении */
+    color: #FFD700;
+    transform: scale(1.1);
 }
 
-/* Ссылка на GitHub */
 .github-link {
     display: inline-block;
     position: relative;
     z-index: 1;
-    user-select: none; /* Отключаем выделение логотипа */
+    user-select: none;
 }
 
 .github-link a {
@@ -350,22 +415,20 @@ footer {
 
 .github-image {
     width: 150px;
-    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Переход для фильтра и масштабирования */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Эффект при наведении на логотип */
 .github-link a:hover .github-image {
-    transform: scale(1.2); /* Легкое увеличение при наведении */
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)); /* Сияние при наведении через drop-shadow */
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
 }
 
-/* Пузырьки для секции comparison */
 .comparison-bubbles {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Полная высота родительской секции */
+    height: 100%;
     z-index: 0;
     overflow: hidden;
     pointer-events: none;
@@ -380,22 +443,20 @@ footer {
     opacity: 0.6;
 }
 
-/* Анимация для подъема и движения влево-вправо пузырьков */
 @keyframes combinedBubbleMovement {
     0% {
-        transform: translate(0, 0); /* Начальная точка */
+        transform: translate(0, 0);
         opacity: 1;
     }
     50% {
-        transform: translate(50px, -50vh); /* Движение влево и вверх */
+        transform: translate(50px, -50vh);
     }
     100% {
-        transform: translate(-50px, -120vh); /* Движение вправо и вверх */
+        transform: translate(-50px, -120vh);
         opacity: 0.3;
     }
 }
 
-/* Настройки для пузырьков с разными размерами и временем */
 .comparison-bubble:nth-child(1) { left: 5%; width: 15px; height: 15px; animation-duration: 10s; animation-delay: 6s; }
 .comparison-bubble:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-duration: 13.5s; animation-delay: 3s; }
 .comparison-bubble:nth-child(3) { left: 15%; width: 25px; height: 25px; animation-duration: 14.5s; animation-delay: 1.8s; }
@@ -419,17 +480,15 @@ footer {
 .comparison-bubble:nth-child(20) { left: 0%; width: 25px; height: 25px; animation-duration:12.3s; animation-delay: 2.1s; }
 .comparison-bubble:nth-child(21) { left: 95%; width: 18px; height: 18px; animation-duration: 11.8s; animation-delay: 2.7s; }
 
-/* Пузырьки для секции github */
 .github-bubbles {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
     overflow: hidden;
     pointer-events: none;
-    z-index: 0; /* Ставим z-index ниже, чтобы пузырьки были за контентом */
+    z-index: 0;
 }
 
 .github-bubble {
@@ -441,7 +500,6 @@ footer {
     opacity: 0.6;
 }
 
-/* Анимация для подъема и движения пузырьков */
 @keyframes githubBubbleMove {
     0% {
         transform: translate(0, 0);
@@ -465,7 +523,6 @@ footer {
     }
 }
 
-/* Настройки для пузырьков разного размера и продолжительности */
 .github-bubble:nth-child(1) { left: 5%; width: 15px; height: 15px; animation-duration: 5s; animation-delay: 0s; }
 .github-bubble:nth-child(2) { left: 15%; width: 20px; height: 20px; animation-duration: 6s; animation-delay: 2s; }
 .github-bubble:nth-child(3) { left: 25%; width: 25px; height: 25px; animation-duration: 7s; animation-delay: 8s; }
@@ -478,10 +535,10 @@ footer {
 .github-bubble:nth-child(10) { left: 95%; width: 20px; height: 20px; animation-duration: 4s; animation-delay: 2s; }
 
 .seamine-container {
-    position: absolute; /* Абсолютное позиционирование внутри футера */
-    bottom: 0; /* Мина вплотную к нижней части футера */
+    position: absolute;
+    bottom: 0;
     left: -9%;
-    transform: translateX(-50%); /* Центрируем мину */
+    transform: translateX(-50%);
 }
 
 .seamine {
@@ -489,25 +546,34 @@ footer {
     opacity: 0.8;
     transition: transform 0.3s ease, filter 0.3s ease, margin 0.3s ease;
     margin-bottom: 0;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0)); /* Маска градиента для исчезновения */
-    mask-size: 100% 100%;
-    user-select: none; /* Отключаем выделение мины */
+    user-select: none;
+}
+
+.seamine-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 50.5%;
+    transform: translateX(-50%);
+    height: 150px;
+    width: 5%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none;
 }
 
 .seamine:hover {
-    transform: scale(1.2) translateY(-20px); /* Увеличиваем и поднимаем картинку вверх */
+    transform: scale(1.2) translateY(-20px);
     filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
 }
 
 @media (max-width: 850px) {
-    /* Скрываем название "The Battleship Game" */
     .header-wave {
         display: none;
     }
 }
 
 @media (max-width: 1800px) {
-    /* Скрываем мину */
     .seamine-container {
         display: none;
     }
@@ -519,16 +585,16 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000; /* Фон для прелоадера */
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Прелоадер выше всех элементов */
+    z-index: 9999;
 }
 
 .spinner {
-    border: 8px solid rgba(255, 255, 255, 0.3); /* Легкая полупрозрачная окантовка */
-    border-top: 8px solid #fff; /* Верхний сегмент - белый */
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #fff;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -540,7 +606,6 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-/* Скрываем контент, пока прелоадер не завершится */
-body.loading #main-content {
+.loading #main-content {
     display: none;
 }

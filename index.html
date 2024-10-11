@@ -15,9 +15,7 @@
     <div id="preloader">
         <div class="spinner"></div>
     </div>
-    <!-- Остальная часть сайта здесь -->
 
-    <!-- Основной контент страницы -->
     <div id="main-content">
         <div class="sun-rays"></div>
         <div class="container">
@@ -109,22 +107,22 @@
                     </div>
                     <div class="image-container-wrapper">
                         <div class="image-container">
-                            <img src="assets/before1.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/before1.png" alt="Before" class="image-before">
                             <img src="assets/after1.png" alt="After" class="image-after" loading="lazy">
                         </div>
 
                         <div class="image-container">
-                            <img src="assets/before2.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/before2.png" alt="Before" class="image-before">
                             <img src="assets/after2.png" alt="After" class="image-after" loading="lazy">
                         </div>
 
                         <div class="image-container">
-                            <img src="assets/before3.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/before3.png" alt="Before" class="image-before">
                             <img src="assets/after3.png" alt="After" class="image-after" loading="lazy">
                         </div>
 
                         <div class="image-container">
-                            <img src="assets/before4.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/before4.png" alt="Before" class="image-before">
                             <img src="assets/after4.png" alt="After" class="image-after" loading="lazy">
                         </div>
                     </div>
@@ -138,7 +136,6 @@
                             <img src="assets/github-logo.png" alt="GitHub" class="github-image">
                         </a>
                     </div>
-                     <!-- Добавляем пузырьки -->
                     <div class="github-bubbles">
                         <div class="github-bubble"></div>
                         <div class="github-bubble"></div>
@@ -162,36 +159,31 @@
                 </div>
             </footer>
         </div>
-    </div> <!-- Закрывающий тег main-content -->
+    </div>
 
 <script>
-    // Получаем элемент мины и аудио
     const seamine = document.querySelector('.seamine');
     const boomSound = document.getElementById('boom-sound');
 
-    // Добавляем обработчик клика на мину
     seamine.addEventListener('click', function() {
-        // Проигрываем звук взрыва
         boomSound.play();
 
-        // Прокручиваем страницу вверх
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Плавная прокрутка
+            behavior: 'smooth'
         });
     });
 </script>
 
 <script>
-    // Получаем список важных изображений, которые нужно загрузить
     const importantImages = [
-        'assets/before1.png',
-        'assets/after1.png',
-        'assets/before2.png',
-        'assets/after2.png'
+        'assets/sun-rays.png',
+        'assets/background1.png',
+        'assets/background2.png',
+        'assets/github-logo.png',
+        'assets/seamine.png'
     ];
 
-    // Функция для предзагрузки изображений
     function preloadImages(sources, callback) {
         let loadedImages = 0;
         const totalImages = sources.length;
@@ -202,19 +194,17 @@
             img.onload = () => {
                 loadedImages++;
                 if (loadedImages === totalImages) {
-                    callback(); // Все изображения загружены
+                    callback();
                 }
             };
         });
     }
 
-    // Показать содержимое сайта после загрузки изображений
     preloadImages(importantImages, () => {
-        document.getElementById('preloader').style.display = 'none'; // Скрываем прелоадер
-        document.body.classList.remove('loading'); // Показать основной контент
+        document.getElementById('preloader').style.display = 'none';
+        document.body.classList.remove('loading');
     });
 
-    // Пока изображения загружаются, добавляем класс "loading"
     document.body.classList.add('loading');
 </script>
 
