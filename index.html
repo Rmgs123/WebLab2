@@ -12,108 +12,211 @@
     <link rel="preload" href="assets/sun-rays.png" as="image">
 </head>
 <body>
-    <div class="sun-rays"></div>
-    <div class="container">
-        <header>
-            <div class="header-wave">
-                <span>T</span><span>h</span><span>e</span>
-                <span class="space"></span>
-                <span>B</span><span>a</span><span>t</span><span>t</span><span>l</span><span>e</span><span>s</span><span>h</span><span>i</span><span>p</span>
-                <span class="space"></span>
-                <span>G</span><span>a</span><span>m</span><span>e</span>
-            </div>
-            <div class="bubbles">
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-                <div class="bubble"></div>
-            </div>
-        </header>
-
-        <main>
-            <section class="background-section" id="background1">
-                <div class="content">
-                    <h2>Dive into the multiplayer sea battles!</h2>
-                    <p>Try your strategy and skills with other players in our newest game! <br>
-                     <br> <span class="larger-text">We provide:</span> <br> <br>
-                    - LAN multiplayer support. <br>
-                    - Multiple lobbies. <br>
-                    - Ship placement and rotation functionality. <br>
-                    - Gameplay with hit and miss indicators. <br>
-                    - Easy and quick restarts. <br>
-                    - Hit sounds. <br>
-                    - Beutiful backgrounds. <br>
-                    - and More...</p>
-                </div>
-            </section>
-            <section class="background-section" id="background2">
-                <div class="content">
-                    <h2>New features and updates!</h2>
-                    <p>Our latest release is <i>V1.1</i>. <br> <br>
-                    <span class="larger-text">What was added in <i>V1.1</i></span>: <br> <br>
-                    - Beautiful backgrounds in: <i>main menu, lobbies menu, ship placing menu, game</i> and in the <i>end game menu</i>. <br>
-                    - Sound effects. <br>
-                    - Font visibility (added outlines). <br>
-                    - 'assets' folder. <br>
-                    - and More... <br>
-                    </p>
-                </div>
-            </section>
-            <section class="comparison-section">
-                <h2>Comparison of <i>V1.0</i> and <i>V1.1:</i></h2>
-                <div class="image-container-wrapper">
-                    <div class="image-container">
-                        <img src="assets/before1.png" alt="Before" class="image-before">
-                        <img src="assets/after1.png" alt="After" class="image-after">
-                    </div>
-
-                    <div class="image-container">
-                        <img src="assets/before2.png" alt="Before" class="image-before">
-                        <img src="assets/after2.png" alt="After" class="image-after">
-                    </div>
-
-                    <div class="image-container">
-                        <img src="assets/before3.png" alt="Before" class="image-before">
-                        <img src="assets/after3.png" alt="After" class="image-after">
-                    </div>
-
-                    <div class="image-container">
-                        <img src="assets/before4.png" alt="Before" class="image-before">
-                        <img src="assets/after4.png" alt="After" class="image-after">
-                    </div>
-                </div>
-            </section>
-            <section class="github-section">
-                <div class="github-description">
-                    <p>Download our game on <i>GitHub!</i> <br> </p>
-                </div>
-                <div class="github-link">
-                    <a href="https://github.com/Rmgs123/WebLab1/releases/tag/v1.1" target="_blank">
-                        <img src="assets/github-logo.png" alt="GitHub" class="github-image">
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>© 2024 BattleshipGame.    Made by @Rmgs123 & @mihvas</p>
-        </footer>
+    <div id="preloader">
+        <div class="spinner"></div>
     </div>
-    <script src="battleshipgame_script.js"></script>
+    <!-- Остальная часть сайта здесь -->
+
+    <!-- Основной контент страницы -->
+    <div id="main-content">
+        <div class="sun-rays"></div>
+        <div class="container">
+            <header>
+                <div class="header-wave">
+                    <span>T</span><span>h</span><span>e</span>
+                    <span class="space"></span>
+                    <span>B</span><span>a</span><span>t</span><span>t</span><span>l</span><span>e</span><span>s</span><span>h</span><span>i</span><span>p</span>
+                    <span class="space"></span>
+                    <span>G</span><span>a</span><span>m</span><span>e</span>
+                </div>
+                <div class="bubbles">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                </div>
+            </header>
+
+            <main>
+                <section class="background-section" id="background1">
+                    <div class="content">
+                        <h2>Dive into the multiplayer sea battles!</h2>
+                        <p>Try your strategy and skills with other players in our newest game! <br>
+                         <br> <span class="larger-text">We provide:</span> <br> <br>
+                        - LAN multiplayer support. <br>
+                        - Multiple lobbies. <br>
+                        - Ship placement and rotation functionality. <br>
+                        - Gameplay with hit and miss indicators. <br>
+                        - Easy and quick restarts. <br>
+                        - Hit sounds. <br>
+                        - Beutiful backgrounds. <br>
+                        - and More...</p>
+                    </div>
+                </section>
+                <section class="background-section" id="background2">
+                    <div class="content">
+                        <h2>New features and updates!</h2>
+                        <p>Our latest release is <i>V1.1</i>. <br> <br>
+                        <span class="larger-text">What was added in <i>V1.1</i></span>: <br> <br>
+                        - Beautiful backgrounds in: <i>main menu, lobbies menu, ship placing menu, game</i> and in the <i>end game menu</i>. <br>
+                        - Sound effects. <br>
+                        - Font visibility (added outlines). <br>
+                        - 'assets' folder. <br>
+                        - and More... <br>
+                        </p>
+                    </div>
+                </section>
+                <section class="comparison-section">
+                    <h2>Comparison of <i>V1.0</i> and <i>V1.1:</i></h2>
+                    <div class="comparison-bubbles">
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+
+                        <div class="comparison-bubble"></div>
+                        <div class="comparison-bubble"></div>
+                    </div>
+                    <div class="image-container-wrapper">
+                        <div class="image-container">
+                            <img src="assets/before1.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/after1.png" alt="After" class="image-after" loading="lazy">
+                        </div>
+
+                        <div class="image-container">
+                            <img src="assets/before2.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/after2.png" alt="After" class="image-after" loading="lazy">
+                        </div>
+
+                        <div class="image-container">
+                            <img src="assets/before3.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/after3.png" alt="After" class="image-after" loading="lazy">
+                        </div>
+
+                        <div class="image-container">
+                            <img src="assets/before4.png" alt="Before" class="image-before" loading="lazy">
+                            <img src="assets/after4.png" alt="After" class="image-after" loading="lazy">
+                        </div>
+                    </div>
+                </section>
+                <section class="github-section">
+                    <div class="github-description">
+                        <p>Download our game on <i>GitHub!</i> <br> </p>
+                    </div>
+                    <div class="github-link">
+                        <a href="https://github.com/Rmgs123/WebLab1/releases/tag/v1.1" target="_blank">
+                            <img src="assets/github-logo.png" alt="GitHub" class="github-image">
+                        </a>
+                    </div>
+                     <!-- Добавляем пузырьки -->
+                    <div class="github-bubbles">
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                        <div class="github-bubble"></div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>© 2024 BattleshipGame.    Made by @Rmgs123 & @mihvas</p>
+                <div class="seamine-container">
+                    <audio id="boom-sound" src="assets/boom.mp3" preload="auto"></audio>
+                    <img src="assets/seamine.png" alt="Sea Mine" class="seamine">
+                </div>
+            </footer>
+        </div>
+    </div> <!-- Закрывающий тег main-content -->
+
+<script>
+    // Получаем элемент мины и аудио
+    const seamine = document.querySelector('.seamine');
+    const boomSound = document.getElementById('boom-sound');
+
+    // Добавляем обработчик клика на мину
+    seamine.addEventListener('click', function() {
+        // Проигрываем звук взрыва
+        boomSound.play();
+
+        // Прокручиваем страницу вверх
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Плавная прокрутка
+        });
+    });
+</script>
+
+<script>
+    // Получаем список важных изображений, которые нужно загрузить
+    const importantImages = [
+        'assets/before1.png',
+        'assets/after1.png',
+        'assets/before2.png',
+        'assets/after2.png'
+    ];
+
+    // Функция для предзагрузки изображений
+    function preloadImages(sources, callback) {
+        let loadedImages = 0;
+        const totalImages = sources.length;
+
+        sources.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+                loadedImages++;
+                if (loadedImages === totalImages) {
+                    callback(); // Все изображения загружены
+                }
+            };
+        });
+    }
+
+    // Показать содержимое сайта после загрузки изображений
+    preloadImages(importantImages, () => {
+        document.getElementById('preloader').style.display = 'none'; // Скрываем прелоадер
+        document.body.classList.remove('loading'); // Показать основной контент
+    });
+
+    // Пока изображения загружаются, добавляем класс "loading"
+    document.body.classList.add('loading');
+</script>
+
 </body>
 </html>
