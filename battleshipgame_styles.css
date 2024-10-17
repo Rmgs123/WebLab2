@@ -218,7 +218,7 @@ header {
     font-family: "Play", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.2em;
+    font-size: 1.5em;
     line-height: 1.6;
     color: #7fff7f;
 }
@@ -458,11 +458,11 @@ footer {
         opacity: 1;
     }
     50% {
-        transform: translate(50px, -50vh);
+        transform: translate(50px, -75vh);
     }
     100% {
-        transform: translate(-50px, -120vh);
-        opacity: 0.3;
+        transform: translate(-50px, -150vh);
+        opacity: 0.2;
     }
 }
 
@@ -515,19 +515,19 @@ footer {
         opacity: 1;
     }
     25% {
-        transform: translate(15px, -10vh);
+        transform: translate(15px, -12vh);
         opacity: 0.8;
     }
     50% {
-        transform: translate(15px, -20vh);
+        transform: translate(15px, -24vh);
         opacity: 0.6;
     }
     75% {
-        transform: translate(-20px, -30vh);
+        transform: translate(-20px, -36vh);
         opacity: 0.4;
     }
     100% {
-        transform: translate(10px, -40vh);
+        transform: translate(10px, -50vh);
         opacity: 0.1;
     }
 }
