@@ -590,6 +590,24 @@ footer {
 
 @media (max-width: 475px) {
     .header-wave span {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 390px) {
+    .header-wave span {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 310px) {
+    .header-wave span {
+        font-size: 0.3em;
+    }
+}
+
+@media (max-width: 290px) {
+    .header-wave span {
         display: none;
     }
 }
@@ -597,6 +615,27 @@ footer {
 @media (max-width: 1800px) {
     .seamine-container {
         display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    #background1, #background2 {
+        position: relative;
+        background: none;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    #background1::before, #background2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #18b529, #188524);
+        opacity: 0.1;
+        z-index: -1;
     }
 }
 
