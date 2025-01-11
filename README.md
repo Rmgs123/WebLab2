@@ -3,7 +3,7 @@ _This is a solo static website developing project using HTML, CSS, JS._
 
 ## **Link:**
 - **Old link:** _https://battleshipgame.ru_
-- **New link:** **_https://rmgs123.github.io/WebLab2_**
+- **New link:** **_[https://rmgs123.github.io/WebLab2](https://rmgs123.github.io/WebLab2/)_**
   
 ## **What this website is about?**
 - This website is about one of my projects _(products)_ - The **BattleshipGame**. 
